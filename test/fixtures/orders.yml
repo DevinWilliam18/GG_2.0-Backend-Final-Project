@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_time: 2022-04-22 22:37:15
+  status: MyString
+  finished_time: 2022-04-22 22:37:15
+  customer_id: one
+
+two:
+  order_time: 2022-04-22 22:37:15
+  status: MyString
+  finished_time: 2022-04-22 22:37:15
+  customer_id: two

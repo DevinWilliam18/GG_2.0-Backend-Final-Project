@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
   def index
     @customers = Customer.all
 
-    render json: @customers
+    render json: @customers, include: [:orders]
   end
 
   # GET /customers/1
@@ -22,6 +22,7 @@ class CustomersController < ApplicationController
     else
       render json: @customer.errors, status: :unprocessable_entity
     end
+
   end
 
   # PATCH/PUT /customers/1
