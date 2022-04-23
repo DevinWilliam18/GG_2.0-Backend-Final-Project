@@ -1,10 +1,9 @@
-class OrdersController < ApplicationController
+class Api::V1::OrdersController < ApplicationController
   before_action :set_order, only: %i[ show update destroy ]
 
   # GET /orders
   def index
-    @orders = Order.all
-
+    @orders = Order.where(customer_id: params[:customer_id])
     render json: @orders
   end
 
@@ -41,11 +40,11 @@ class OrdersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
-      @order = Order.find(params[:id])
+      @order = Order.where(customer_id: params[:customer_id]).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:order_time, :status, :finished_time, :customer_id_id)
+      params.require(:order).permit(:status, :finished_time, :customer_id)
     end
 end

@@ -1,9 +1,10 @@
 class CreateOrders < ActiveRecord::Migration[7.0]
   def change
     create_table :orders do |t|
-      t.datetime :order_time
       t.string :status
-      t.datetime :finished_time
+      t.datetime :finished_time, default: -> { 'NULL' }, null: true
+      #Ex:- :null => false
+      #Ex:- :default =>''
       t.references :customer, null: false, foreign_key: true
 
       t.timestamps

@@ -21,7 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_22_153715) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.datetime "order_time"
     t.string "status"
     t.datetime "finished_time"
     t.integer "customer_id", null: false
