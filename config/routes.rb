@@ -1,8 +1,18 @@
+
 Rails.application.routes.draw do
+  
   namespace :api do
     namespace :v1 do
       resources :customers do
-        resources :orders
+        resources :orders do
+          resources :details
+        end
+      end
+      resources :owners do
+        resources :foods        
+      end
+      resources :categories do
+        resources :foods
       end      
     end
   end

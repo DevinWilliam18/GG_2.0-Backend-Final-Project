@@ -3,6 +3,7 @@ class Api::V1::OrdersController < ApplicationController
 
   # GET /orders
   def index
+  
     @orders = Order.where(customer_id: params[:customer_id])
     render json: @orders
   end
