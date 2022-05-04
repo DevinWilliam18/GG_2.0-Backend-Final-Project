@@ -15,12 +15,12 @@ class Api::V1::CustomersController < ApplicationController
 
   # POST /customers
   def create
-    @customer = Customer.new(customer_params)
+    @one_customer = Customer.new(customer_params)
 
-    if @customer.save
-      render json: @customer, status: :created, location: @customer
+    if @one_customer.save
+      render json: @one_customer, status: :created, location: @customer
     else
-      render json: @customer.errors, status: :unprocessable_entity
+      render error: {error: 'Unable to create user.'}, status: 400
     end
 
   end

@@ -14,22 +14,26 @@ class Api::V1::OrdersController < ApplicationController
 
   # POST /orders
   def create
-    @order = Order.new(order_params)
+    @one_order = Order.new(order_params)
 
-    if @order.save
-      render json: @order, status: :created, location: @order
+    if @one_order.save
+      render json: @one_order, status: :created, location: @order
     else
-      render json: @order.errors, status: :unprocessable_entity
+      render json: @one_order.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /orders/1
   def update
-    if @order.update(order_params)
-      render json: @order
-    else
-      render json: @order.errors, status: :unprocessable_entity
-    end
+      if @order.update(order_params)
+        if @order[:status] == "PAID"
+          @order[:finished_time] = Time.zone.now
+          @order.update(order_params)
+        end
+        render json: @order
+      else
+        render json: @order.errors, status: :unprocessable_entity
+      end  
   end
 
   # DELETE /orders/1
@@ -45,6 +49,6 @@ class Api::V1::OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:status, :finished_time, :customer_id)
+      params.require(:order).permit(:status,:customer_id)
     end
 end

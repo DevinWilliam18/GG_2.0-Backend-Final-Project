@@ -32,7 +32,6 @@ class Api::V1::OwnersController < ApplicationController
       @owner.destroy
   end
   
-
   private
    def set_owner
     @owner = Owner.find(params[:id])
