@@ -4,7 +4,6 @@ class Api::V1::CustomersController < ApplicationController
   # GET /customers
   def index
     @customers = Customer.all
-
     render json: @customers
   end
 
@@ -16,7 +15,6 @@ class Api::V1::CustomersController < ApplicationController
   # POST /customers
   def create
     @one_customer = Customer.new(customer_params)
-
     if @one_customer.save
       render json: @one_customer, status: :created, location: @customer
     else
