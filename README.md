@@ -12,34 +12,47 @@
 | PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:id	|
 | DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:id|	
 
+### Category
+| Method | Explanation |
+|--------|-------------|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories 	|
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories	|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:id	|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:id|	
+
+### Owner
+| Method | Explanation |
+|--------|-------------|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners 	|
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners	|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners/:id	|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners/:id|	
+
+
 
 
 ### Order
-get
-post
-put
-delete
+| Method | Explanation |
+|--------|-------------|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders 	|
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders	|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id	|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id|
 
 ### Detail
-get
-post
-put
-delete
+| Method | Explanation |
+|--------|-------------|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details 	|
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details	|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/:order_id/details/:detail_id	|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details/:detail_id|
 
 ### Food
-get
-post
-put
-delete
+| Method | Explanation |
+|--------|-------------|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods 	|
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods	|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods/:food_id	|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods/:food_id|
 
-### Category
-get
-post
-put
-delete
 
-### Owner
-get
-post
-put
-delete
