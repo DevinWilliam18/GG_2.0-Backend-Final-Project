@@ -42,7 +42,7 @@
 ### Detail
 | Method | Explanation |
 |--------|-------------|
-| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details 	|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details |
 | POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details	|
 | PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/:order_id/details/:detail_id	|
 | DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:customer_id/orders/:order_id/details/:detail_id|
@@ -50,9 +50,9 @@
 ### Food
 | Method | Explanation |
 |--------|-------------|
-| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods 	|
-| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods	|
-| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods/:food_id	|
-| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods/:food_id|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods 	or <br />https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners/:owner_id/foods |
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods	or <br />https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners/:owner_id/foods|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods/:food_id	or <br />https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners/:owner_id/foods/:food_id|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/categories/:category_id/foods/:food_id or <br />https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/owners/:owner_id/foods/:food_id|
 
 
