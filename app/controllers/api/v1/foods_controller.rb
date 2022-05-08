@@ -49,7 +49,7 @@ class Api::V1::FoodsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def food_params
-        params.require(:food).permit(:food_name, :description, :qty, :price, :category_id, :owner_id)
-    end
+    # def food_params
+    #     params.require(:food).permit(:food_name, :description, :qty, :price, :category_id, :owner_id)
+    # end
 end

@@ -14,9 +14,10 @@ class Api::V1::DetailsController < ApplicationController
   def create
       @one_detail = Detail.new(detail_params)
       if @one_detail.save
+
         
-        @food[:qty] -= params[:qty].to_f
-        @food.update(food_params)
+        @temp_create = @food[:qty] - params[:qty]
+        @food.update(:qty => @temp_create)
 
         @one_detail[:total_price] = @one_detail[:qty].to_f * @food[:price] 
         @one_detail.update(detail_params)
@@ -30,11 +31,10 @@ class Api::V1::DetailsController < ApplicationController
       if @detail.update(detail_params)        
         # @food = Food.where(id: @detail[:food_id])
 
-        @food[:qty] -= params[:qty]
-        
+        @temp_update = @food[:qty] - params[:qty]
         @detail[:total_price] = @detail[:qty].to_f * @food[:price] 
         @detail.update(detail_params)
-        @food.update(food_params)    
+        @food.update(:qty => @temp_update)    
 
         render json: @detail
       else
@@ -43,8 +43,8 @@ class Api::V1::DetailsController < ApplicationController
   end
   
   def destroy
-      @food[:qty] += params[:qty]
-      @food.update(food_params)
+      @temp_destroy = @food[:qty] + params[:qty]
+      @food.update(:qty => @temp_destroy)
       @detail.destroy
   end
   
