@@ -1,24 +1,45 @@
-# README
+# ERD
+![](erd.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Routes
 
-* Ruby version
+### Customer
+| Method | Explanation |
+|--------|-------------|
+| GET|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers 	|
+| POST| https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers	|
+| PUT|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:id	|
+| DELETE|https://gigih-family-catering-devinwilliam00.gojek22.repl.co/api/v1/customers/:id|	
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+### Order
+get
+post
+put
+delete
 
-* Database initialization
+### Detail
+get
+post
+put
+delete
 
-* How to run the test suite
+### Food
+get
+post
+put
+delete
 
-* Services (job queues, cache servers, search engines, etc.)
+### Category
+get
+post
+put
+delete
 
-* Deployment instructions
-
-* ...
+### Owner
+get
+post
+put
+delete
