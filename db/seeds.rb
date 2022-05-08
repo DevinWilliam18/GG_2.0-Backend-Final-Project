@@ -2,6 +2,7 @@ customer1 = Customer.create(name: "waris", email: "waris@gmail.com", phone_numbe
 customer2 = Customer.create(name: "neno", email: "rijikiki@gmail.com", phone_number: "081212120", address: "Kec. Situ Langit, Kel. Roro, Jl. Tabatoki no 990")
 customer3 = Customer.create(name: "Robert Lewandowski", email: "robert@gmail.com", phone_number: "0821236724586", address: "Kec. dodorejo, Kel. getongmanis, Jl. pahlawan no 990")
 
+
 order1 = Order.create(customer_id: customer1.id)
 order2 = Order.create(customer_id: customer2.id)
 

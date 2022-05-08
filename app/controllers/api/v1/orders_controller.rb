@@ -14,8 +14,6 @@ class Api::V1::OrdersController < ApplicationController
 
   # POST /orders
   def create
-
-
     @one_order = Order.new(order_params)
 
     if @one_order.save
@@ -23,6 +21,7 @@ class Api::V1::OrdersController < ApplicationController
     else
       render json: @one_order.errors, status: :unprocessable_entity
     end
+
   end
 
   # PATCH/PUT /orders/1
